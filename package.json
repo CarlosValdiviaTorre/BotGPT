@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "test for botgpt",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "no-op": "echo \"No operation\"",
+    "build": "npm run no-op"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CarlosValdiviaTorre/BotGPT.git"
