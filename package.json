@@ -2,9 +2,10 @@
   "name": "botgpt",
   "version": "1.0.0",
   "description": "test for botgpt",
-  "main": "index.js",
+  "type": "module", 
+  "main": "src/server.js", 
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/server.js",
     "no-op": "echo \"No operation\"",
     "build": "npm run no-op"
   },
