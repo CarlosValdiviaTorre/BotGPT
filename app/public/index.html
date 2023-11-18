@@ -2,12 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Aplicación Web</title>
-    <link rel="stylesheet" href="app\public\style.css">
+    <title>Chat estilo GPT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenido a Mi Aplicación Web</h1>
-    <script src="app\public\main.jss"></script>
+    <div id="chat-container">
+        <!-- Área de visualización de los mensajes -->
+        <div id="message-area"></div>
+
+        <!-- Área de entrada del usuario -->
+        <textarea id="user-input" placeholder="Escribe tu pregunta aquí..."></textarea>
+
+        <!-- Botón de enviar -->
+        <button id="send-button">Enviar</button>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
