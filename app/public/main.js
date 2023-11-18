@@ -6,12 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para enviar el mensaje y recibir la respuesta
     async function sendMessage(message) {
         try {
-            // Aquí enviarías el mensaje a tu API
-            const response = await fetch('TU_ENDPOINT_DE_API', {
+            const response = await fetch('/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    // Aquí irían otros headers necesarios, como tokens de autenticación
                 },
                 body: JSON.stringify({ message: message })
             });
@@ -21,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
-
-            // Asumiendo que 'data' contiene la respuesta del chatbot
-            displayMessage(data.reply, 'bot');
+            displayMessage(data.response, 'bot');
         } catch (error) {
             console.error('Error al enviar el mensaje:', error);
         }
