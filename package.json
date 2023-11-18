@@ -2,8 +2,8 @@
   "name": "botgpt",
   "version": "1.0.0",
   "description": "test for botgpt",
-  "type": "module", 
-  "main": "src/server.js", 
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "no-op": "echo \"No operation\"",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/CarlosValdiviaTorre/BotGPT#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "openai": "^1.1.3"

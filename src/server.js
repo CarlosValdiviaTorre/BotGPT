@@ -1,7 +1,7 @@
-import 'dotenv/config'; // Reemplaza require('dotenv').config();
+import 'dotenv/config';
 import express from 'express';
-import { OpenAI } from 'openai'; // Nota el uso de destructuring aquí
-import bodyParser from 'body-parser';
+import { OpenAI } from 'openai';
+import cors from 'cors'; // Importa cors
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,14 +11,15 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// Habilita CORS para todas las rutas
+app.use(cors());
+
 // bodyParser.json() es parte de express a partir de la versión 4.16+
 app.use(express.json());
 
 app.post('/ask', async (req, res) => {
     try {
         const { message } = req.body;
-
-        // Cambios en la API pueden requerir que ajustes esta parte
         const completion = await openai.createCompletion({
             model: "gpt-4",
             prompt: message,
