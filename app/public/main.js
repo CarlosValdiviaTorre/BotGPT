@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para enviar el mensaje y recibir la respuesta
     async function sendMessage(message) {
         try {
-            const response = await fetch('/ask', {
+            const response = await fetch('/test', {  // Cambiado a /test
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ message: message })
             });
-
+    
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
+    
             const data = await response.json();
-            displayMessage(data.response, 'bot');
+            displayMessage(data.message, 'bot');  // Cambiado para mostrar el mensaje de prueba
         } catch (error) {
             console.error('Error al enviar el mensaje:', error);
         }

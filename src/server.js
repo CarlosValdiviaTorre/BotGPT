@@ -33,6 +33,11 @@ app.post('/ask', async (req, res) => {
     }
 });
 
+app.post('/test', (req, res) => {
+    res.json({ message: 'Test endpoint works!' });
+});
+
+
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
