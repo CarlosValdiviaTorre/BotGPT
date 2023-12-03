@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para enviar el mensaje y recibir la respuesta
     async function sendMessage(message) {
         try {
-            const response = await fetch('/test', {  // Cambiado a /test
+            const response = await fetch('/api/test', {  // Cambiado a /test
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

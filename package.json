@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "test for botgpt",
   "type": "module",
-  "main": "src/server.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node src/server.js",
     "no-op": "echo \"No operation\"",
